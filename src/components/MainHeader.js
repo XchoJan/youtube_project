@@ -6,7 +6,7 @@ import { Sizes } from "../helpers/sizes";
 import ArrowRight from "../assets/icons/ArrowRight";
 
 const MainHeader = (props) => {
-  const {title, button, app_logo, page_title, user_name, button_icon, button_arrow} = props;
+  const {title, button, app_logo, page_title, user_name, onPress, button_icon, button_arrow} = props;
   return (
     <View style={styles.header_container}>
       <View>
@@ -18,7 +18,7 @@ const MainHeader = (props) => {
             {user_name}
           </Text>
         </View>
-        {button && <TouchableOpacity style={styles.button}>
+        {button && <TouchableOpacity onPress={onPress} style={styles.button}>
           <Text style={styles.button_title}>
             {button_icon} {title}
           </Text>

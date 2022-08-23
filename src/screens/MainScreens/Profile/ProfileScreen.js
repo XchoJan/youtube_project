@@ -11,8 +11,11 @@ import ResetPin from "../../../assets/icons/ProfileIcons/ResetPin";
 import ArrowRight from "../../../assets/icons/ProfileIcons/ArrowRight";
 import { Sizes } from "../../../helpers/sizes";
 import FeedBackBear from "../../../assets/icons/Bears/FeedBackBear";
+import {useDispatch} from "react-redux";
 
 const ProfileScreen = (props) => {
+  const dispatch = useDispatch();
+
   return (
     <View style={styles.container}>
       <View>
@@ -22,6 +25,7 @@ const ProfileScreen = (props) => {
           title={"Logout"}
           button_icon={<LogOut />}
           user_name={"Aman129dasd45465465@gmail.ru"}
+          onPress={()=>{dispatch({type: 'IS_LOGGED', payload: false})}}
         />
       </View>
       <GlobalContainer>

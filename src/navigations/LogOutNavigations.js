@@ -26,8 +26,9 @@ function PinCodeScreen({ navigation }) {
   return <PinCodeComponent navigation={navigation} />;
 }
 
-function ConfirmPinScreen({ navigation }) {
-  return <ConfirmPinComponent navigation={navigation} />;
+function ConfirmPinScreen({ navigation, route }) {
+  const {pinCode} = route.params
+  return <ConfirmPinComponent pinCode={pinCode} navigation={navigation} />;
 }
 
 export default function LogOutNavigations() {
