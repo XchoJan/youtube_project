@@ -12,7 +12,7 @@ const ReportsScreen = (props) => {
   return (
     <ScrollView>
       <View>
-        <MainHeader page_title={"Reports"} button title={"Daily"} />
+        <MainHeader button_arrow page_title={"Reports"} button title={"Daily"} />
       </View>
       <View style={styles.calendar_box}>
         <Text style={styles.calendar_items}>Today, 17 Feb, 2022</Text>
@@ -24,7 +24,6 @@ const ReportsScreen = (props) => {
           </Text>
         </View>
         <View style={styles.chart_container}>
-
           {/*charty stex*/}
 
         </View>

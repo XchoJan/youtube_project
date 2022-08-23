@@ -1,10 +1,8 @@
 import React from "react";
-import {Text, View, StyleSheet, ScrollView, Image} from "react-native";
+import { View, StyleSheet, ScrollView, Image} from "react-native";
 import GlobalContainer from "../../../components/GlobalContainer";
 import MainHeader from "../../../components/MainHeader";
-import Supervise from "./FeaturesComponents/Supervise";
 import UpcomingFeatures from "./FeaturesComponents/UpcomingFeatures";
-import Schedule from "./FeaturesComponents/Schedule";
 import FeaturesItem from "./FeaturesComponents/FeaturesItem";
 import Television from "../../../assets/icons/Television";
 import RemoteControl from "../../../assets/icons/RemoteControl";

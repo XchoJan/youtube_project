@@ -3,9 +3,10 @@ import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
 import MySitterLogo from "../assets/icons/MySitterLogo";
 import { color2, color5 } from "../helpers/colors";
 import { Sizes } from "../helpers/sizes";
+import ArrowRight from "../assets/icons/ArrowRight";
 
 const MainHeader = (props) => {
-  const { children, title, button, app_logo, page_title, user_name, button_icon } = props;
+  const {title, button, app_logo, page_title, user_name, button_icon, button_arrow} = props;
   return (
     <View style={styles.header_container}>
       <View>
@@ -21,6 +22,9 @@ const MainHeader = (props) => {
           <Text style={styles.button_title}>
             {button_icon} {title}
           </Text>
+          {button_arrow && <Text style={{top: 15, left: 10}}>
+            <ArrowRight opacity={1} fill={'#fff'}/>
+          </Text>}
         </TouchableOpacity>}
       </View>
     </View>
@@ -42,6 +46,8 @@ const styles = StyleSheet.create({
     width: 97,
     height: 45,
     borderRadius: 20,
+    flexDirection: "row",
+    justifyContent: "center",
   },
   page_title: {
     fontSize: 26,
