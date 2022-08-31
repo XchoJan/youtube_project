@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
-import MySitterLogo from "../assets/icons/MySitterLogo";
-import { color2, color5 } from "../helpers/colors";
-import { Sizes } from "../helpers/sizes";
-import ArrowRight from "../assets/icons/ArrowRight";
+import MySitterLogo from "src/assets/icons/MySitterLogo";
+import { color2, color5 } from "src/helpers/colors";
+import { Sizes } from "src/helpers/sizes";
+import ArrowRight from "src/assets/icons/ArrowRight";
 
 const MainHeader = (props) => {
   const {title, button, app_logo, page_title, user_name, onPress, button_icon, button_arrow} = props;

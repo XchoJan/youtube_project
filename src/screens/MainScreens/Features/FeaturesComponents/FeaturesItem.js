@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Image, Text, View, StyleSheet } from "react-native";
-import Ribbon from "../../../../assets/icons/Ribbon";
-import CustomButton from "../../../../components/CustomButton";
-import { Sizes } from "../../../../helpers/sizes";
-import { color1, color5 } from "../../../../helpers/colors";
+import Ribbon from "src/assets/icons/Ribbon";
+import CustomButton from "src/components/CustomButton";
+import { Sizes } from "src/helpers/sizes";
+import { color1, color5 } from "src/helpers/colors";
 
 const Supervise = (props) => {
     const {Available, Title, Description, Icon, Frame} = props

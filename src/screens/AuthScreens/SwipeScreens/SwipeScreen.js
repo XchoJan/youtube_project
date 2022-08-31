@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Image, StyleSheet, Text, View } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
-import { Sizes } from "../../../helpers/sizes";
-import { color1, color2 } from "../../../helpers/colors";
-import CustomButton from "../../../components/CustomButton";
+import { Sizes } from "helpers/sizes";
+import { color1, color2 } from "helpers/colors";
+import CustomButton from "src/components/CustomButton";
 
 
 const SwipeScreen = (props) => {

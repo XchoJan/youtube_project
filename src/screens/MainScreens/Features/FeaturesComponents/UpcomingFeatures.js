@@ -1,15 +1,15 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import GlobalContainer from "../../../../components/GlobalContainer";
-import Icon1 from "../../../../assets/icons/UpcomingFeatures/Icon1";
-import Icon2 from "../../../../assets/icons/UpcomingFeatures/Icon2";
-import { color2, color5 } from "../../../../helpers/colors";
-import Icon3 from "../../../../assets/icons/UpcomingFeatures/Icon3";
-import Icon4 from "../../../../assets/icons/UpcomingFeatures/Icon4";
-import Icon5 from "../../../../assets/icons/UpcomingFeatures/Icon5";
-import Icon6 from "../../../../assets/icons/UpcomingFeatures/Icon6";
-import Icon7 from "../../../../assets/icons/UpcomingFeatures/Icon7";
-import Icon8 from "../../../../assets/icons/UpcomingFeatures/Icon8";
+import GlobalContainer from "src/components/GlobalContainer";
+import Icon1 from "src/assets/icons/UpcomingFeatures/Icon1";
+import Icon2 from "src/assets/icons/UpcomingFeatures/Icon2";
+import { color2, color5 } from "src/helpers/colors";
+import Icon3 from "src/assets/icons/UpcomingFeatures/Icon3";
+import Icon4 from "src/assets/icons/UpcomingFeatures/Icon4";
+import Icon5 from "src/assets/icons/UpcomingFeatures/Icon5";
+import Icon6 from "src/assets/icons/UpcomingFeatures/Icon6";
+import Icon7 from "src/assets/icons/UpcomingFeatures/Icon7";
+import Icon8 from "src/assets/icons/UpcomingFeatures/Icon8";
 
 const UpcomingFeatures = (props) => {
   return (

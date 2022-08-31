@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, Image, ScrollView, FlatList, TextInput, Pressable } from "react-native";
-import { Sizes } from "../../../helpers/sizes";
-import { color5 } from "../../../helpers/colors";
-import CustomButton from "../../../components/CustomButton";
-import Star from "../../../assets/icons/Star";
+import { Text, View, StyleSheet, FlatList, TextInput, Pressable } from "react-native";
+import { Sizes } from "src/helpers/sizes";
+import { color5 } from "src/helpers/colors";
+import CustomButton from "src/components/CustomButton";
+import Star from "src/assets/icons/Star";
 
 const FeedbackScreen = (props) => {
   const count = [1, 2, 3, 4, 5];

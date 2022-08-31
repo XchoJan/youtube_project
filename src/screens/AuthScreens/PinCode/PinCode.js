@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-import GlobalContainer from "../../../components/GlobalContainer";
-import {Text, View, StyleSheet} from "react-native";
-import {color1, color2} from "../../../helpers/colors";
-import {Sizes} from "../../../helpers/sizes";
-import Preview from "../../../assets/icons/Preview";
-import CustomButton from "../../../components/CustomButton";
+import GlobalContainer from "src/components/GlobalContainer";
+import {StyleSheet, Text, View} from "react-native";
+import {color1, color2} from "src/helpers/colors";
+import {Sizes} from "src/helpers/sizes";
+import Preview from "src/assets/icons/Preview";
+import CustomButton from "src/components/CustomButton";
 import PinCodeInput from "react-native-pincode-input";
+import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
 
 const PinCode = (props) => {
     const [pinCode, setPinCode] = useState("");
@@ -21,41 +22,45 @@ const PinCode = (props) => {
     return (
         <GlobalContainer title={"Pin Code"}>
             <View style={{flex: 1}}>
-                <View style={styles.title_box}>
-                    <Text style={styles.title}>
-                        Set your PIN
-                    </Text>
-                    <Text style={styles.description}>
-                        Enter a 4 digit PIN
-                    </Text>
-                </View>
-                <View style={styles.pin_box}>
-                    <PinCodeInput
-                        length={4}
-                        pin={pinCode}
-                        onTextChange={(setPinCode)}
-                        circleEmptyStyle={{
-                            borderWidth: 1,
-                            borderColor: color2,
-                            width: 40,
-                            height: 40,
-                            borderRadius: 10
-                        }}
-                        circleFilledStyle={{
-                            backgroundColor: color2,
-                            borderWidth: 1,
-                            borderColor: color2,
-                        }}
-                    />
-                </View>
-                <View style={styles.preview_box}>
-                    <Text style={styles.preview_icon}>
-                        <Preview/>
-                    </Text>
-                    <Text style={styles.preview_title}>
-                        Preview
-                    </Text>
-                </View>
+                <KeyboardAwareScrollView>
+                    <View style={styles.title_box}>
+                        <Text style={styles.title}>
+                            Set your PIN
+                        </Text>
+                        <Text style={styles.description}>
+                            Enter a 4 digit PIN
+                        </Text>
+                    </View>
+                    <View style={styles.pin_box}>
+                        <PinCodeInput
+                            length={4}
+                            pin={pinCode}
+                            onTextChange={(setPinCode)}
+                            circleEmptyStyle={{
+                                borderWidth: 1,
+                                borderColor: color2,
+                                width: 40,
+                                height: 40,
+                                borderRadius: 10
+                            }}
+                            circleFilledStyle={{
+                                backgroundColor: color2,
+                                borderWidth: 1,
+                                borderColor: color2,
+                            }}
+                        />
+                    </View>
+                    <View style={styles.preview_box}>
+                        <Text style={styles.preview_icon}>
+                            <Preview/>
+                        </Text>
+                        <Text style={styles.preview_title}>
+                            Preview
+                        </Text>
+                    </View>
+                </KeyboardAwareScrollView>
+
+
             </View>
             <View style={{width: "100%"}}>
                 <CustomButton
@@ -67,6 +72,7 @@ const PinCode = (props) => {
 };
 
 export default PinCode;
+
 const styles = StyleSheet.create({
     title_box: {
         alignItems: "center",
@@ -96,6 +102,7 @@ const styles = StyleSheet.create({
     preview_box: {
         flexDirection: "row",
         justifyContent: "center",
+        top: -40
     },
     preview_icon: {
         top: 3,

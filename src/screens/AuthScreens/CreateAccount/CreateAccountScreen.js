@@ -1,9 +1,9 @@
 import React from "react";
-import SignInContainer from "../../../components/SignInContainer";
-import CustomButton from "../../../components/CustomButton";
+import SignInContainer from "src/components/SignInContainer";
+import CustomButton from "src/components/CustomButton";
 import { Image, Text, View, StyleSheet } from "react-native";
-import { Sizes } from "../../../helpers/sizes";
-import { color1 } from "../../../helpers/colors";
+import { Sizes } from "src/helpers/sizes";
+import { color1 } from "src/helpers/colors";
 
 const CreateAccountScreen = (props) => {
   return (
@@ -22,7 +22,11 @@ const CreateAccountScreen = (props) => {
         <View>
           <CustomButton
             google
-            backgroundColor={"#4684F4"}
+            buttonStyle={{
+              backgroundColor: '#4684F4',
+              title: 'red',
+              borderColor:'transparent'
+            }}
             title={"Sign up / Log in"}
             onPress={() => {
               props.navigation.navigate("EnterKid");
@@ -33,8 +37,8 @@ const CreateAccountScreen = (props) => {
     </SignInContainer>
   );
 };
-
 export default CreateAccountScreen;
+
 const styles = StyleSheet.create({
   image_box: {
     alignItems: "center",

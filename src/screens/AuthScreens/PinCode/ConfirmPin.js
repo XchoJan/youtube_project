@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import {Text, View, StyleSheet, Pressable} from "react-native";
-import GlobalContainer from "../../../components/GlobalContainer";
+import GlobalContainer from "src/components/GlobalContainer";
 import PinCodeInput from "react-native-pincode-input";
-import {color1, color2, color6} from "../../../helpers/colors";
-import Preview from "../../../assets/icons/Preview";
-import CustomButton from "../../../components/CustomButton";
-import {Sizes} from "../../../helpers/sizes";
+import {color1, color2, color6} from "helpers/colors";
+import Preview from "src/assets/icons/Preview";
+import CustomButton from "src/components/CustomButton";
+import {Sizes} from "helpers/sizes";
 import {useDispatch} from "react-redux";
+import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
 
 const ConfirmPin = (props) => {
     const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const ConfirmPin = (props) => {
     return (
         <GlobalContainer>
             <View style={{flex: 1}}>
+                <KeyboardAwareScrollView>
                 <View style={styles.title_box}>
                     <Text style={styles.title}>
                         Set your PIN
@@ -66,7 +68,9 @@ const ConfirmPin = (props) => {
                         Preview
                     </Text>
                 </View>
+                </KeyboardAwareScrollView>
             </View>
+
             <View style={{width: "100%"}}>
                 <Pressable onPress={() => {
                     props.navigation.navigate("PinCode");
@@ -116,6 +120,7 @@ const styles = StyleSheet.create({
     preview_box: {
         flexDirection: "row",
         justifyContent: "center",
+        top: -40
     },
     preview_icon: {
         top: 3,

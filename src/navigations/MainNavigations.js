@@ -1,66 +1,64 @@
 import React from "react";
-import { color1 } from "../helpers/colors";
+import { color1 } from "src/helpers/colors";
 
-import {createStackNavigator} from "@react-navigation/stack";
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 
-import HomeIcon from "../assets/icons/TabBarIcons/HomeIcon";
-import FeaturesIcon from "../assets/icons/TabBarIcons/FeaturesIcon";
-import ReportsIcon from "../assets/icons/TabBarIcons/ReportsIcon";
-import ProfileIcon from "../assets/icons/TabBarIcons/ProfileIcon";
+import HomeIcon from "src/assets/icons/TabBarIcons/HomeIcon";
+import FeaturesIcon from "src/assets/icons/TabBarIcons/FeaturesIcon";
+import ReportsIcon from "src/assets/icons/TabBarIcons/ReportsIcon";
+import ProfileIcon from "src/assets/icons/TabBarIcons/ProfileIcon";
 
-import HomeComponent from "../screens/MainScreens/Home/HomeScreen";
-import FeaturesComponent from "../screens/MainScreens/Features/FeaturesScreen";
-import ReportsComponent from "../screens/MainScreens/Reports/ReportsScreen";
-import ProfileComponent from "../screens/MainScreens/Profile/ProfileScreen";
-import FeedbackComponent from "../screens/MainScreens/Feedback/FeedbackScreen";
+import {
+    HomeScreen,
+    ProfileScreen,
+    ReportsScreen,
+    FeedbackScreen,
+    FeaturesScreen
+} from "screens";
+
+let Tab = createBottomTabNavigator();
 
 
-const Tab = createBottomTabNavigator();
-
-
-function HomeScreen({navigation}) {
-  return <HomeComponent navigation={navigation}/>;
+function Home({navigation}) {
+  return <HomeScreen navigation={navigation}/>
+}
+function Features({navigation}) {
+  return <FeaturesScreen navigation={navigation}/>
+}
+function Reports({navigation}) {
+  return <ReportsScreen navigation={navigation}/>
+}
+function Feedback({navigation}) {
+  return <FeedbackScreen navigation={navigation}/>
 }
 
-function FeaturesScreen({navigation}) {
-  return <FeaturesComponent navigation={navigation}/>;
-}
-function ReportsScreen({navigation}) {
-  return <ReportsComponent navigation={navigation}/>;
-}
-function FeedbackScreen({navigation}) {
-  return <FeedbackComponent navigation={navigation}/>;
-}
-
-function ProfileScreen({navigation}) {
-  return <ProfileComponent navigation={navigation}/>;
+function Profile({navigation}) {
+  return <ProfileScreen navigation={navigation}/>;
 }
 
 export default function Main() {
   return (
     <Tab.Navigator
-      initialRouteName="Patients"
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
       }}>
-
-      <Tab.Screen name="Home" component={HomeScreen}
+      <Tab.Screen name="Home" component={Home}
                   options={{tabBarIcon: ({focused}) => (<HomeIcon/>),
                     tabBarActiveTintColor: color1}}/>
-      <Tab.Screen name="Reports" component={ReportsScreen}
+      <Tab.Screen name="Reports" component={Reports}
                   options={{tabBarIcon: ({focused}) => (<ReportsIcon/>),
                     tabBarActiveTintColor: color1}}/>
-      <Tab.Screen name="Features" component={FeaturesScreen}
+      <Tab.Screen name="Features" component={Features}
                   options={{tabBarIcon: ({focused}) => (<FeaturesIcon/>),
                     tabBarActiveTintColor: color1}}/>
 
-      <Tab.Screen name="Profile" component={ProfileScreen}
+      <Tab.Screen name="Profile" component={Profile}
                   options={{tabBarIcon: ({focused}) => (<ProfileIcon/>),
                     tabBarActiveTintColor: color1}}/>
 
-      <Tab.Screen name="Feedback" component={FeedbackScreen}
+      <Tab.Screen name="Feedback" component={Feedback}
                   options={{
                     tabBarButton: () => null,
                     tabBarVisible: false,

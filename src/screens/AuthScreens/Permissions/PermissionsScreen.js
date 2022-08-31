@@ -1,13 +1,13 @@
 import React from "react";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
-import GlobalContainer from "../../../components/GlobalContainer";
-import BearRightHand from "../../../assets/icons/Bears/BearRightHand";
-import Bear1 from "../../../assets/icons/Bears/Bear1";
-import BearLeftHand from "../../../assets/icons/Bears/BearLeftHand";
-import { Sizes } from "../../../helpers/sizes";
-import Permissions from "../../../assets/icons/Permissions";
-import { color1 } from "../../../helpers/colors";
-import CustomButton from "../../../components/CustomButton";
+import GlobalContainer from "src/components/GlobalContainer";
+import BearRightHand from "src/assets/icons/Bears/BearRightHand";
+import Bear1 from "src/assets/icons/Bears/Bear1";
+import BearLeftHand from "src/assets/icons/Bears/BearLeftHand";
+import { Sizes } from "src/helpers/sizes";
+import Permissions from "src/assets/icons/Permissions";
+import { color1 } from "src/helpers/colors";
+import CustomButton from "src/components/CustomButton";
 
 const PermissionsScreen = (props) => {
 

@@ -1,15 +1,15 @@
 import React from "react";
-import { View, StyleSheet, ScrollView, Image} from "react-native";
-import GlobalContainer from "../../../components/GlobalContainer";
-import MainHeader from "../../../components/MainHeader";
+import { View, StyleSheet, ScrollView } from "react-native";
+import GlobalContainer from "src/components/GlobalContainer";
+import MainHeader from "src/components/MainHeader";
 import UpcomingFeatures from "./FeaturesComponents/UpcomingFeatures";
 import FeaturesItem from "./FeaturesComponents/FeaturesItem";
-import Television from "../../../assets/icons/Television";
-import RemoteControl from "../../../assets/icons/RemoteControl";
-import GeoFencing from "../../../assets/icons/GeoFencing";
-import SuperviseFrame from "../../../assets/icons/SuperviseFrame";
-import ScheduleFrame from "../../../assets/icons/ScheduleFrame";
-import GeoFacingFrame from "../../../assets/icons/GeoFacingFrame";
+import Television from "src/assets/icons/Television";
+import RemoteControl from "src/assets/icons/RemoteControl";
+import GeoFencing from "src/assets/icons/GeoFencing";
+import SuperviseFrame from "src/assets/icons/SuperviseFrame";
+import ScheduleFrame from "src/assets/icons/ScheduleFrame";
+import GeoFacingFrame from "src/assets/icons/GeoFacingFrame";
 
 const FeaturesScreen = (props) => {
     return (

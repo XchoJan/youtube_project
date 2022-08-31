@@ -1,11 +1,11 @@
 import React from "react";
-import { Text, StyleSheet, View, ScrollView, Dimensions } from "react-native";
-import MainHeader from "../../../components/MainHeader";
-import { color1, color2, color5, color6 } from "../../../helpers/colors";
-import GlobalContainer from "../../../components/GlobalContainer";
-import { Sizes } from "../../../helpers/sizes";
-import ArrowRight from "../../../assets/icons/ArrowRight";
-import CustomButton from "../../../components/CustomButton";
+import { Text, StyleSheet, View, ScrollView } from "react-native";
+import MainHeader from "src/components/MainHeader";
+import { color1, color2, color5 } from "src/helpers/colors";
+import GlobalContainer from "src/components/GlobalContainer";
+import { Sizes } from "src/helpers/sizes";
+import ArrowRight from "src/assets/icons/ArrowRight";
+import CustomButton from "src/components/CustomButton";
 
 const ReportsScreen = (props) => {
 
@@ -24,6 +24,7 @@ const ReportsScreen = (props) => {
           </Text>
         </View>
         <View style={styles.chart_container}>
+
           {/*charty stex*/}
 
         </View>

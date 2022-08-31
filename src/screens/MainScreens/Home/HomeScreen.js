@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import * as Animatable from 'react-native-animatable';
 import {View, StyleSheet, Text, ScrollView, Image, ImageBackground} from "react-native";
-import MainHeader from "../../../components/MainHeader";
-import {color1, color2, color3, color4, color5, color6} from "../../../helpers/colors";
-import {Sizes} from "../../../helpers/sizes";
-import CustomButton from "../../../components/CustomButton";
-import Like from "../../../assets/icons/Like";
-import {BackgroundImage} from "react-native-elements/dist/config";
+import MainHeader from "src/components/MainHeader";
+import {color1, color2, color5, color6} from "src/helpers/colors";
+import {Sizes} from "src/helpers/sizes";
+import CustomButton from "src/components/CustomButton";
+import Like from "src/assets/icons/Like";
 
 const HomeScreen = (props) => {
     let [animation, setAnimation] = useState(true)
@@ -131,21 +130,24 @@ const HomeScreen = (props) => {
                 </View>
                 <View style={{paddingHorizontal: '25%',}}>
                     <CustomButton
-                        height={61}
-                        borderRadius={34}
+                        buttonStyle={{
+                            backgroundColor: animation ? color2 : 'transparent',
+                            height: 61,
+                            borderRadius: 35,
+                            borderColor: color2
+                        }}
+                        color={animation ? 'white' : color2}
                         title={animation ? "Enable Child Mode" : 'Disable child mode'}
                         onPress={handleAnimation}
-                        backgroundColor={animation ? color2 : 'transparent'}
-                        borderColor={color2}
-                        color={animation ? 'white' : color2}
+
                     />
                 </View>
             </View>
         </ScrollView>
     );
 };
-
 export default HomeScreen;
+
 const styles = StyleSheet.create({
     title_box: {
         alignItems: "center",

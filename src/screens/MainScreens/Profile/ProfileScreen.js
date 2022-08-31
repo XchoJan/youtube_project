@@ -1,16 +1,15 @@
 import React from "react";
 import { Text, View, StyleSheet, Pressable, TouchableOpacity, ImageBackground } from "react-native";
-import MainHeader from "../../../components/MainHeader";
-import LogOut from "../../../assets/icons/LogOut";
-import GlobalContainer from "../../../components/GlobalContainer";
-import { color1, color2, color4, color5 } from "../../../helpers/colors";
-import Lock from "../../../assets/icons/ProfileIcons/Lock";
-import Star from "../../../assets/icons/ProfileIcons/Star";
-import Phone from "../../../assets/icons/ProfileIcons/Phone";
-import ResetPin from "../../../assets/icons/ProfileIcons/ResetPin";
-import ArrowRight from "../../../assets/icons/ProfileIcons/ArrowRight";
-import { Sizes } from "../../../helpers/sizes";
-import FeedBackBear from "../../../assets/icons/Bears/FeedBackBear";
+import MainHeader from "src/components/MainHeader";
+import LogOut from "src/assets/icons/LogOut";
+import GlobalContainer from "src/components/GlobalContainer";
+import { color1, color2, color4, color5 } from "src/helpers/colors";
+import Star from "src/assets/icons/ProfileIcons/Star";
+import Phone from "src/assets/icons/ProfileIcons/Phone";
+import ResetPin from "src/assets/icons/ProfileIcons/ResetPin";
+import ArrowRight from "src/assets/icons/ProfileIcons/ArrowRight";
+import { Sizes } from "src/helpers/sizes";
+import FeedBackBear from "src/assets/icons/Bears/FeedBackBear";
 import {useDispatch} from "react-redux";
 
 const ProfileScreen = (props) => {

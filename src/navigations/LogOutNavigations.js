@@ -2,33 +2,36 @@ import * as React from 'react';
 const Stack = createStackNavigator();
 import { createStackNavigator } from "@react-navigation/stack";
 
-import CreateAccountComponent from "../screens/AuthScreens/CreateAccount/CreateAccountScreen";
-import SwipeScreenComponent from "../screens/AuthScreens/SwipeScreens/SwipeScreen";
-import EnterKidComponent from "../screens/AuthScreens/EnterKid/EnterKidScreen";
-import PermissionsComponent from "../screens/AuthScreens/Permissions/PermissionsScreen";
-import PinCodeComponent from "../screens/AuthScreens/PinCode/PinCode";
-import ConfirmPinComponent from "../screens/AuthScreens/PinCode/ConfirmPin";
+import {
+  PinCode,
+  ConfirmPin,
+  SwipeScreen,
+  EnterKidScreen,
+  PermissionsScreen,
+  CreateAccountScreen
+} from "screens";
 
-function CreateAccountScreen({ navigation }) {
-  return <CreateAccountComponent navigation={navigation} />;
+
+function CreateAccount({ navigation }) {
+  return <CreateAccountScreen navigation={navigation} />
 }
 function SwipeScreens({ navigation }) {
-  return <SwipeScreenComponent navigation={navigation} />;
+  return <SwipeScreen navigation={navigation} />;
 }
-function EnterKidScreen({ navigation }) {
-  return <EnterKidComponent navigation={navigation} />;
+function EnterKid({ navigation }) {
+  return <EnterKidScreen navigation={navigation} />;
 }
 
-function PermissionsScreen({ navigation }) {
-  return <PermissionsComponent navigation={navigation} />;
+function Permissions({ navigation }) {
+  return <PermissionsScreen navigation={navigation} />;
 }
 function PinCodeScreen({ navigation }) {
-  return <PinCodeComponent navigation={navigation} />;
+  return <PinCode navigation={navigation} />;
 }
 
 function ConfirmPinScreen({ navigation, route }) {
   const {pinCode} = route.params
-  return <ConfirmPinComponent pinCode={pinCode} navigation={navigation} />;
+  return <ConfirmPin pinCode={pinCode} navigation={navigation} />;
 }
 
 export default function LogOutNavigations() {
@@ -38,11 +41,11 @@ export default function LogOutNavigations() {
     }}>
       <Stack.Screen name="SwipeScreen" component={SwipeScreens} />
 
-      <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
+      <Stack.Screen name="CreateAccount" component={CreateAccount} />
 
-      <Stack.Screen name="EnterKid" component={EnterKidScreen} />
+      <Stack.Screen name="EnterKid" component={EnterKid} />
 
-      <Stack.Screen name="Permissions" component={PermissionsScreen} />
+      <Stack.Screen name="Permissions" component={Permissions} />
 
       <Stack.Screen name="PinCode" component={PinCodeScreen} />
 

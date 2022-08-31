@@ -1,9 +1,7 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
-import { color1, color2 } from "../helpers/colors";
-import { Sizes } from "../helpers/sizes";
-import Slide1 from "../assets/icons/Slide1";
-
+import { View, StyleSheet, Text, } from "react-native";
+import { color1, } from "src/helpers/colors";
+import { Sizes } from "src/helpers/sizes";
 
 const SignInContainer = (props) => {
   const { children, title} = props;

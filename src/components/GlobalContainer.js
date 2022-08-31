@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Sizes } from "../helpers/sizes";
+import { Sizes } from "src/helpers/sizes";
 
 const GlobalContainer = (props) => {
   const {children} = props

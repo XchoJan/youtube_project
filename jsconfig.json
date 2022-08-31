@@ -2,5 +2,11 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
+  "path": {
+    "src/*": ["./src/*"],
+    "screens/*": ["./src/screens/*"],
+    "helpers/*": ["./src/helpers/*"],
+    "components/*": ["./src/components/*"]
+  },
   "include": ["src"]
 }
